@@ -1,0 +1,45 @@
+.form {
+  border: 1px solid black;
+  border-radius: 9px;
+  margin-bottom: 20px;
+  max-width: 300px;
+  padding: 20px 15px;
+  background-color: rgb(247, 246, 240);
+  margin-left: auto;
+  margin-right: auto;
+}
+.inputWrap {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.inputLabel {
+  margin-bottom: 5px;
+}
+
+.input {
+  width: 270px;
+  padding: 8px 5px;
+  padding-left: 10px;
+  border: 1px solid black;
+  border-radius: 4px;
+  margin-right: 10px;
+  outline: transparent;
+}
+
+.inputErrorMsg {
+  color: rgb(142, 19, 60);
+}
+
+.submitBtn {
+  min-width: 150px;
+  padding: 10px 0;
+  background-color: rgba(188, 192, 191, 0.799);
+  border: 1px solid rgba(87, 88, 88, 0.799);
+  border-radius: 4px;
+  cursor: pointer;
+}
+.submitBtn:hover,
+.submitBtn:focus {
+  background-color: rgba(164, 167, 166, 0.799);
+}
