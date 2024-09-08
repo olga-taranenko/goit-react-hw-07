@@ -5,14 +5,14 @@ import { nanoid } from "nanoid";
 import css from "./ContactForm.module.css";
 import { useId } from "react";
 import { useDispatch } from "react-redux";
-import { addContact } from "../../redux/contactsSlice";
+import { addContact } from "../../redux/contactsOps";
 
 const INITIAL_VALUES = {
   name: "",
   number: "",
 };
 
-const phoneRegExp = /^[0-9]{3}-[0-9]{2}-[0-9]{2}$/;
+const phoneRegExp = /^[0-9]{3}-[0-9]{3}-[0-9]{4}$/;
 
 const addContactSchema = Yup.object().shape({
   name: Yup.string()
@@ -20,7 +20,10 @@ const addContactSchema = Yup.object().shape({
     .max(50, "Too Long!")
     .required("Required!"),
   number: Yup.string()
-    .matches(phoneRegExp, "The phone number must match the format 'xxx-xx-xx'")
+    .matches(
+      phoneRegExp,
+      "The phone number must match the format 'xxx-xxx-xxxx'"
+    )
     .required("Required!")
     .typeError("Enter phone-number!"),
 });
